@@ -25,7 +25,7 @@ public class ToggleResource {
     public ToggleResource(Injector injector) {
         this.injector = injector;
     }
-    
+
     @GET
     @Timed
     public List<FeatureToggle> getAllFeatureToggles() {
