@@ -1,0 +1,44 @@
+<style type="text/css">
+body {
+    font: 13px Helvetica,arial,clean,sans-serif;
+    line-height: 1.4;
+    color: #333;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size:100%;
+    font: inherit;
+}
+.bubble {
+    padding: 3px;
+    background: #EEE;
+    border-radius:3px;
+}
+.feature-table {
+    width: 100%;
+    margin: 0;
+    border-radius: 3px;
+    border: 1px solid #CACACA;
+}
+.feature-table th {
+    text-align: left;
+    font-weight: bold;
+    padding:6px 3px;
+    color: #555;
+    text-shadow: 0 1px 0 #FFF;
+    border-bottom: 1px solid #D8D8D8;
+    background: -webkit-linear-gradient(#FAFAFA,#EAEAEA);
+    background: -moz-linear-gradient(#FAFAFA,#EAEAEA);
+}
+.feature-table td {
+    background: #F8F8F8;
+    border-bottom: 1px solid #EEE;
+    padding: 7px 3px;
+    color: #484848;
+    vertical-align: middle;
+}
+.feature-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+</style>
