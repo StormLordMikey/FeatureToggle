@@ -5,6 +5,7 @@ import com.google.inject.Injector;
 import com.ioof.toggles.resources.ToggleResource;
 import com.yammer.dropwizard.Service;
 import com.yammer.dropwizard.config.Environment;
+import com.yammer.dropwizard.views.ViewBundle;
 
 public class FeatureToggleService extends Service<FeatureToggleConfiguration> {
     public static void main(String[] args) throws Exception {
@@ -13,6 +14,7 @@ public class FeatureToggleService extends Service<FeatureToggleConfiguration> {
     
     private FeatureToggleService() {
         super("feature-toggle");
+        addBundle(new ViewBundle());
     }
 
     @Override
