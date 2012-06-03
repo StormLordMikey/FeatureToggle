@@ -6,30 +6,6 @@
   </head>
   <body>
     <div class="container">
-        <div class="bubble">
-          <table class="feature-table" callpadding="0" callspacing="0">
-            <thead>
-              <tr class="header">
-                <th></th>
-                <th>name</th>
-                <th>description</th>
-                <th>status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <#list featureToggles as feature>
-              <tr>
-                <td></td>
-                <td>${feature.name?html}</td>
-                <td>${feature.description?html}</td>
-                <td>${feature.status?html}</td>
-              </tr>
-              </#list>
-            </tbody>
-          </table>
-        </div>
-
-
         <h3 class="group-heading">Production</h3>
         <ol class="group">
           <#list featureToggles as feature>
