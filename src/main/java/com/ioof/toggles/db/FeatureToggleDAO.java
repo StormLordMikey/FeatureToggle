@@ -10,7 +10,7 @@ import java.util.List;
 @RegisterMapper(FeatureToggleMapper.class)
 public interface FeatureToggleDAO {
 
-    @SqlQuery("select id, `name`, description, url, `status` "  +
+    @SqlQuery("select id, `name`, description, url, status "  +
               "from toggle.feature_toggle")
     List<FeatureToggle> getAllFeatureToggles();
 }

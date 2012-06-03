@@ -1,4 +1,13 @@
 <style type="text/css">
+html, body, div, span, applet, object, h1, h2, h3, h4, h5, h6, p,  pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a {
+    color: #4183C4;
+    text-decoration: none;
+}
 body {
     font: 13px Helvetica,arial,clean,sans-serif;
     line-height: 1.4;
@@ -9,6 +18,16 @@ table {
     border-spacing: 0;
     font-size:100%;
     font: inherit;
+}
+.red {
+    color : red;
+}
+.green {
+    color : green;
+}
+.container {
+    width: 920px;
+    margin: 0 auto;
 }
 .bubble {
     padding: 3px;
@@ -40,5 +59,116 @@ table {
 }
 .feature-table tbody tr:last-child td {
     border-bottom: 0;
+}
+
+h3.group-heading {
+    margin: 15px 0 0 0;
+    padding: 5px 8px;
+    font-size: 13px;
+    color: #3A505B;
+    text-shadow: 0 1px white;
+    background: #E6F1F6;
+    border: 1px solid #C5D5DD;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.group {
+    list-style-type: none;
+    margin: 0 0 15px 0;
+    background: #F7FBFC;
+    border: 1px solid #C5D5DD;
+    border-top: none;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.group-item {
+    position: relative;
+    padding: 8px 8px 8px 52px;
+    border-top: 1px solid #E2EAEE;
+}
+.group-item:first-child {
+    border-top:none;
+}
+.group-item:nth-child(2n+1) {
+    background: white;
+}
+.group-item:last-child {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.group-item .icon {
+    float:left;
+    margin-left: -44px;
+    border-radius:4px;
+}
+.group-item .title {
+    margin: 1px 0 1px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+.group-item .details {;
+    position: absolute;
+    top: 7px;
+    right:8px;
+}
+.group-item .description {
+    font-size: 12px;
+    color: #888;
+}
+.group-item .status {
+    float: left;
+    height: 22px;
+    padding: 0 7px;
+    line-height: 22px;
+    font-size: 11px;
+    <!--color: #4E575B;-->
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    background: #EFF6F9;
+    background: -moz-linear-gradient(#EFF6F9,#DDECF3);
+    background: -webkit-linear-gradient(#EFF6F9,#DDECF3);
+    border: 1px solid #CEDEE5;
+    border-radius: 3px;
+}
+.group-item:nth-child(2n+1) .status {
+    border-color: #D5DCDF;
+    background: #F2F5F6;
+    background: -moz-linear-gradient(#F2F5F6,#E3EAED);
+    background: -webkit-linear-gradient(#F2F5F6,#E3EAED);
+}
+.group-item .change-button {
+    float: right;
+    clear: left;
+    margin: 1px 12px 0 0;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: right;
+    color: #999;
+}
+.group-item .change-button:hover {
+    color: #4183C4;
+    background-position: 100% -95px;
+}
+.group-item .change-button .mini-icon {
+    position: relative;
+    top: 2px;
+}
+.mini-icon {
+    line-height: 1;
+    font-family: 'Octicons Regular';
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+}
+.mini-icon::before {
+    -moz-transition: color .15s ease-in 0;
+    -webkit-transition: color .15s ease-in 0;
+    font-size: 16px;
+    text-decoration: none;
 }
 </style>
