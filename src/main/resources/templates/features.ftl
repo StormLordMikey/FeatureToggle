@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Feature Toggle Manager</title>
-    <#include "styles.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles.css" />
   </head>
   <body>
     <div class="container">
@@ -10,7 +10,7 @@
         <ol class="group">
           <#list featureToggles as feature>
             <li class="group-item">
-              <img class="icon" height="36" width="36" src="http://localhost/calico/image/features_icon.png">
+              <img class="icon" height="36" width="36" src="/assets/features_icon.png">
               <p class="title">${feature.name?html}</p>
               <div class="meta">
                 <div class="details">

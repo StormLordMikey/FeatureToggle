@@ -19,11 +19,6 @@ public class FeatureToggleResource {
         this.featureToggleDAO = featureToggleDAO;
     }
 
-//    @POST
-//    public FeatureToggle createFeatureToggle(FeatureToggle featureToggle) {
-//
-//    }
-    
     @GET
     public List<FeatureToggle> listFeatureToggle() {
         return featureToggleDAO.findAll();

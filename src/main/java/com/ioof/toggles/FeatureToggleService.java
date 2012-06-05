@@ -2,7 +2,9 @@ package com.ioof.toggles;
 
 import com.ioof.toggles.db.FeatureToggleDAO;
 import com.ioof.toggles.resources.FeatureToggleResource;
+import com.ioof.toggles.resources.FeatureToggleViewResource;
 import com.yammer.dropwizard.Service;
+import com.yammer.dropwizard.bundles.AssetsBundle;
 import com.yammer.dropwizard.config.Environment;
 import com.yammer.dropwizard.db.Database;
 import com.yammer.dropwizard.db.DatabaseFactory;
@@ -16,6 +18,7 @@ public class FeatureToggleService extends Service<FeatureToggleConfiguration> {
     private FeatureToggleService() {
         super("feature-toggle");
         addBundle(new ViewBundle());
+        addBundle(new AssetsBundle());
     }
 
     @Override
@@ -26,5 +29,6 @@ public class FeatureToggleService extends Service<FeatureToggleConfiguration> {
         final FeatureToggleDAO featureToggleDAO = db.onDemand(FeatureToggleDAO.class);
 
         environment.addResource(new FeatureToggleResource(featureToggleDAO));
+        environment.addResource(new FeatureToggleViewResource(featureToggleDAO));
     }
 }
