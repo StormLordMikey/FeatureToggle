@@ -1,4 +1,4 @@
-package com.ioof.toggles.domain;
+package com.ioof.toggles.core;
 
 public class FeatureToggle {
     private final long id;

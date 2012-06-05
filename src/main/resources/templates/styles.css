@@ -122,7 +122,7 @@ h3.group-heading {
     padding: 0 7px;
     line-height: 22px;
     font-size: 11px;
-    <!--color: #4E575B;-->
+    font-weight: bold;
     text-shadow: 0 1px rgba(255, 255, 255, 0.5);
     text-transform: uppercase;
     background: #EFF6F9;

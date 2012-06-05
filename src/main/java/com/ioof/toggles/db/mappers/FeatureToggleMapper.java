@@ -1,6 +1,6 @@
 package com.ioof.toggles.db.mappers;
 
-import com.ioof.toggles.domain.FeatureToggle;
+import com.ioof.toggles.core.FeatureToggle;
 import org.skife.jdbi.v2.StatementContext;
 import org.skife.jdbi.v2.tweak.ResultSetMapper;
 

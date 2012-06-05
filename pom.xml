@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ioof</groupId>
-    <artifactId>FeatureToggle</artifactId>
+    <artifactId>FeatureToggleManager</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -36,16 +36,6 @@
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
             <version>2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.inject</groupId>
-            <artifactId>guice</artifactId>
-            <version>3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.inject.extensions</groupId>
-            <artifactId>guice-multibindings</artifactId>
-            <version>3.0</version>
         </dependency>
     </dependencies>
 

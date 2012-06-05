@@ -1,10 +1,11 @@
 package com.ioof.toggles;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-import com.ioof.toggles.resources.ToggleResource;
+import com.ioof.toggles.db.FeatureToggleDAO;
+import com.ioof.toggles.resources.FeatureToggleResource;
 import com.yammer.dropwizard.Service;
 import com.yammer.dropwizard.config.Environment;
+import com.yammer.dropwizard.db.Database;
+import com.yammer.dropwizard.db.DatabaseFactory;
 import com.yammer.dropwizard.views.ViewBundle;
 
 public class FeatureToggleService extends Service<FeatureToggleConfiguration> {
@@ -18,8 +19,12 @@ public class FeatureToggleService extends Service<FeatureToggleConfiguration> {
     }
 
     @Override
-    protected void initialize(FeatureToggleConfiguration configuration, Environment environment) throws Exception {
-        Injector injector = Guice.createInjector(new FeatureToggleModuleDatabase(configuration, environment));
-        environment.addResource(injector.getInstance(ToggleResource.class));
+    protected void initialize(FeatureToggleConfiguration configuration, Environment environment) throws ClassNotFoundException {
+
+        final DatabaseFactory factory = new DatabaseFactory(environment);
+        final Database db = factory.build(configuration.getDatabaseConfiguration(), "mysql");
+        final FeatureToggleDAO featureToggleDAO = db.onDemand(FeatureToggleDAO.class);
+
+        environment.addResource(new FeatureToggleResource(featureToggleDAO));
     }
 }
