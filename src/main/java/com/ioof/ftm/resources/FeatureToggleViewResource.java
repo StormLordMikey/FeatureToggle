@@ -1,7 +1,7 @@
-package com.ioof.toggles.resources;
+package com.ioof.ftm.resources;
 
-import com.ioof.toggles.db.FeatureToggleDAO;
-import com.ioof.toggles.views.FeatureToggleView;
+import com.ioof.ftm.db.FeatureToggleDAO;
+import com.ioof.ftm.views.FeatureToggleView;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

@@ -1,0 +1,1 @@
+java -jar target/FeatureToggleManager-1.0-SNAPSHOT.jar server feature-toggle.yml

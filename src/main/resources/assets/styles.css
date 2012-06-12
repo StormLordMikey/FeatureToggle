@@ -12,6 +12,12 @@ body {
     line-height: 1.4;
     color: #333;
 }
+header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4183C4;
+    padding-top: 25px;
+}
 table {
     border-collapse: collapse;
     border-spacing: 0;

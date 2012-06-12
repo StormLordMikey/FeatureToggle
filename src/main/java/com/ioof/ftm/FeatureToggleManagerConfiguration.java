@@ -1,4 +1,4 @@
-package com.ioof.toggles;
+package com.ioof.ftm;
 
 import com.yammer.dropwizard.config.Configuration;
 import com.yammer.dropwizard.config.HttpConfiguration;
@@ -9,7 +9,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-public class FeatureToggleConfiguration extends Configuration {
+public class FeatureToggleManagerConfiguration extends Configuration {
     @Valid
     @NotNull
     @JsonProperty

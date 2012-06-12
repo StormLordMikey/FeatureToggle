@@ -1,6 +1,6 @@
-package com.ioof.toggles.views;
+package com.ioof.ftm.views;
 
-import com.ioof.toggles.core.FeatureToggle;
+import com.ioof.ftm.core.FeatureToggle;
 import com.yammer.dropwizard.views.View;
 
 import java.util.List;

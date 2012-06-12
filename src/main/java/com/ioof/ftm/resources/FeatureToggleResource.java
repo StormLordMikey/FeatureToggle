@@ -1,7 +1,7 @@
-package com.ioof.toggles.resources;
+package com.ioof.ftm.resources;
 
-import com.ioof.toggles.core.FeatureToggle;
-import com.ioof.toggles.db.FeatureToggleDAO;
+import com.ioof.ftm.core.FeatureToggle;
+import com.ioof.ftm.db.FeatureToggleDAO;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -23,4 +23,5 @@ public class FeatureToggleResource {
     public List<FeatureToggle> listFeatureToggle() {
         return featureToggleDAO.findAll();
     }
+
 }

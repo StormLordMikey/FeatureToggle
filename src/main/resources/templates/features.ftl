@@ -6,6 +6,7 @@
   </head>
   <body>
     <div class="container">
+      <header>Feature Toggles - "The Toggling"</header>
         <h3 class="group-heading">Production</h3>
         <ol class="group">
           <#list featureToggles as feature>
@@ -14,14 +15,14 @@
               <p class="title">${feature.name?html}</p>
               <div class="meta">
                 <div class="details">
-                    <#if feature.status = "Enabled">
-                      <p class="status green">${feature.status?html}</p>
+                    <#if feature.enabled>
+                      <p class="status green">Enabled</p>
                       <#assign change_text="turn off">
                     <#else>
-                      <p class="status red">${feature.status?html}</p>
+                      <p class="status red">Disabled</p>
                       <#assign change_text="turn on">
                     </#if>
-                     <a href="#" class="change-button">${change_text}</a>
+                     <a href="/toggle/${feature.id}" class="change-button">${change_text}</a>
                 </div>
                 <div class="description"><span>${feature.description?html}</span></div>
               </div>

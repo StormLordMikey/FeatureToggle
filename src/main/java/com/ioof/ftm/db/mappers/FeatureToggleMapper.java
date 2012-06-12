@@ -1,6 +1,6 @@
-package com.ioof.toggles.db.mappers;
+package com.ioof.ftm.db.mappers;
 
-import com.ioof.toggles.core.FeatureToggle;
+import com.ioof.ftm.core.FeatureToggle;
 import org.skife.jdbi.v2.StatementContext;
 import org.skife.jdbi.v2.tweak.ResultSetMapper;
 
@@ -15,6 +15,6 @@ public class FeatureToggleMapper implements ResultSetMapper<FeatureToggle>{
                                  resultSet.getString("name"),
                                  resultSet.getString("description"),
                                  resultSet.getString("url"),
-                                 resultSet.getString("status"));
+                                 resultSet.getBoolean("enabled"));
     }
 }
