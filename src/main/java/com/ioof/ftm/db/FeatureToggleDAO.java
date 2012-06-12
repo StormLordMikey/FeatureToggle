@@ -11,7 +11,7 @@ import org.skife.jdbi.v2.sqlobject.customizers.RegisterMapper;
 @RegisterMapper(FeatureToggleMapper.class)
 public interface FeatureToggleDAO {
 
-    @SqlQuery("select id, `name`, description, url, enabled "  +
+    @SqlQuery("select id, `name`, description, enabled "  +
               "from toggle.feature_toggle")
     ImmutableList<FeatureToggle> findAll();
 

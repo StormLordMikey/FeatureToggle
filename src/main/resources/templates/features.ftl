@@ -13,6 +13,9 @@
             <li class="group-item">
               <img class="icon" height="36" width="36" src="/assets/features_icon.png">
               <p class="title">${feature.name?html}</p>
+              <#if feature.enabled>
+              <div class="age">3 months</div>
+              </#if>
               <div class="meta">
                 <div class="details">
                     <#if feature.enabled>

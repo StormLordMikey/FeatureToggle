@@ -14,7 +14,6 @@ public class FeatureToggleMapper implements ResultSetMapper<FeatureToggle>{
         return new FeatureToggle(resultSet.getInt("id"),
                                  resultSet.getString("name"),
                                  resultSet.getString("description"),
-                                 resultSet.getString("url"),
                                  resultSet.getBoolean("enabled"));
     }
 }
